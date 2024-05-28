@@ -259,7 +259,7 @@ Then define the new interfce in the network configuration (networkd)
 	BitRate=20K
 	RestartSec=100ms
 
- Bookworm uses network manager, it is therefore necessary to enable and run networkd (can run concurently
+ Bookworm uses network manager, it is therefore necessary to enable and run networkd (can run concurently)
 
 	sudo systemctl start systemd-networkd
 	sudo systemctl enable systemd-networkd
