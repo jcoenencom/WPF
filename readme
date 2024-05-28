@@ -1,8 +1,8 @@
 Connection of a Stiebel Eltron heat pump (WPF16) onto a knx Bus.
 
-![Hardware](IMG_9426.jpeg)
+![Hardware](IMG_9426.jpg)
 
-<img src='./IMG_9426.jpeg' width=60%>
+<img src='./IMG_9426.jpg' width=60%>
 
 This project uses a raspberry pi CAN bus interface (MCP2515 Can controller + MCP2551 Transceiver on the RPi's SPI interface) on the CAn' side and connects to the KNX bus via ethernet (either to a KNX/IP router or an instance of knxd).
 
