@@ -5,6 +5,9 @@ needs the python library google translate, argparse
 arguments
 
   -h help
+  
   -a x languages available
+
   -l es (translate in spanish)
+
   -f file to translate either ElsterTable.json (default) or ErrorList.json
