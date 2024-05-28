@@ -249,6 +249,7 @@ insert:
 	can
 	can_raw
 
+Then define the new interfce in the network configuration (networkd)
 
 	sudo nano /etc/systemd/network/80-can.network
 
@@ -257,5 +258,10 @@ insert:
 	[CAN]
 	BitRate=20K
 	RestartSec=100ms
+
+ Bookworm uses network manager, it is therefore necessary to enable and run networkd (can run concurently
+
+	sudo systemctl start systemd-networkd
+	sudo systemctl enable systemd-networkd
 
 
