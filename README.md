@@ -206,56 +206,56 @@ sending request for  T Mélangeur 	 [193, 1, 250, 0, 15] set  T Mélangeur  in k
 
 System implementation:
 
-sudo mkdir /etc/WPF
-sudo cp WPF.ini /etc/WPF/
-sudo cp elster.json /etc/WPF/
-sudo cp knx.py /usr/local/lib/python3.11/dist-packages/
-sudo cp myknx.py /usr/local/lib/python3.11/dist-packages/
-sudo cp wpfknx.py /usr/local/lib/python3.11/dist-packages/
-sudo cp wpf-knx.py /usr/local/bin
+	sudo mkdir /etc/WPF
+	sudo cp WPF.ini /etc/WPF/
+	sudo cp elster.json /etc/WPF/
+	sudo cp knx.py /usr/local/lib/python3.11/dist-packages/
+	sudo cp myknx.py /usr/local/lib/python3.11/dist-packages/
+	sudo cp wpfknx.py /usr/local/lib/python3.11/dist-packages/
+	sudo cp wpf-knx.py /usr/local/bin
 
 
 Installed a systemctl service to start the program when rebooting and restart it if crashing:
 
-sudo nano /etc/systemd/system/wpfknx.service 
+	sudo nano /etc/systemd/system/wpfknx.service 
 insert 
 
-[Unit]
-Description=WPF CAN to KNX translator
-After=syslog.target network-online.target
+	[Unit]
+	Description=WPF CAN to KNX translator
+	After=syslog.target network-online.target
 
-[Service]
-Type=simple
-User=jcoenen
-ExecStart=/usr/local/bin/wpf-knx.py > /var/log/wpfknx.log 2>&1
-Restart=on-failure
-RestartSec=10
-KillMode=process
+	[Service]
+	Type=simple
+	User=jcoenen
+	ExecStart=/usr/local/bin/wpf-knx.py > /var/log/wpfknx.log 2>&1
+	Restart=on-failure
+	RestartSec=10
+	KillMode=process
 
-[Install]
-WantedBy=multi-user.target
+	[Install]
+	WantedBy=multi-user.target
 
 
 Then:
 
-sudo systemctl start wpfknx
-sudo systemctl enable wpfknx
+	sudo systemctl start wpfknx
+	sudo systemctl enable wpfknx
 
 Make sure the CAN bus comes up after reboot:
 
-sudo nano /etc/modules-load.d/can.conf
+	sudo nano /etc/modules-load.d/can.conf
 insert:
 
-can
-can_raw
+	can
+	can_raw
 
 
-sudo nano /etc/systemd/network/80-can.network
+	sudo nano /etc/systemd/network/80-can.network
 
-[Match]
-Name=can0
-[CAN]
-BitRate=20K
-RestartSec=100ms
+	[Match]
+	Name=can0
+	[CAN]
+	BitRate=20K
+	RestartSec=100ms
 
 
