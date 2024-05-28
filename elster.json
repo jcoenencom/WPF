@@ -1,0 +1,44 @@
+{ "0xe":{
+    "nom":"TECS",
+    "grpaddr":"4/2/3",
+    "dpt":"9",
+    "candest": 1,
+    "unit":0
+}, "0x11":{
+    "nom":"T ambiante",
+    "grpaddr":"4/2/1",
+    "dpt":"9",
+    "candest": 2,
+    "unit":1
+}, "0x16":{
+    "nom":"T Retour",
+    "grpaddr":"4/2/5",
+    "dpt":"9",
+    "candest": 1,
+    "unit":0
+}, "0x1d6":{
+    "nom":"T Départ",
+    "grpaddr":"4/2/4",
+    "dpt":"9",
+    "candest": 1,
+    "unit":0
+}, "0xc":{
+    "nom":"T Extérieure",
+    "grpaddr":"4/2/0",
+    "dpt":"9",
+    "candest": 1,
+    "unit":0
+}, "0x1d4":{
+    "nom":"T Source",
+    "grpaddr":"4/2/2",
+    "dpt":"9",
+    "candest": 1,
+    "unit":0
+}, "0xf":{
+    "nom":"T Mélangeur",
+    "grpaddr":"4/2/6",
+    "dpt":"9",
+    "candest": 4,
+    "unit":1
+}
+}

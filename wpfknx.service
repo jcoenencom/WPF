@@ -1,0 +1,14 @@
+[Unit]
+Description=WPF CAN to KNX translator
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+User=jcoenen
+ExecStart=/usr/local/bin/wpf-knx.py > /var/log/wpfknx.log 2>&1
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
