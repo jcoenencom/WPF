@@ -1,6 +1,11 @@
 Elster table from Jürg Müller website.
 
-ElsterTable.json
+ElsterTable.inc
+ErrorList.inc
+
+Text is in German
+
+eslter.py being a utility that translate the descritpion from german to one of the implemented language in google translate, takes a while so be patient, sometimes the utiity fails, looks like some timing problems while waiting fro google translation.
 
 needs the python library google translate, argparse
 
