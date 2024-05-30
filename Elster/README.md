@@ -1,3 +1,7 @@
+Elster table from Jürg Müller website.
+
+ElsterTable.json
+
 needs the python library google translate, argparse
 
   pip3 install googletrans==3.1.0a0
