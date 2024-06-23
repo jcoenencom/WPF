@@ -34,7 +34,7 @@ def can_parser(msg):
   if (ext==0xfa):
     bsend = msg.data[3:5]
     sender = int.from_bytes(bsend,'big')
-    bval = int.from_bytes(msg.data[5:],'big')/10
+    bval = int.from_bytes(msg.data[5:],'big',signed=True)/10
   else:
     bsend = msg.data[1:3]
     sender = int.from_bytes(bsend,'big')
