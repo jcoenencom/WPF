@@ -44,13 +44,13 @@ def can_parser(msg):
 ###
   if hex(sender) in wpflist.keys():
     name = wpflist[hex(sender)].nom
-    if bval <=1 or bval > 70:
-       print('unexpected value: ',bval,' in msg:',msg)
-    else:
+#    if bval <=1 or bval > 70:
+#       print('unexpected value: ',bval,' in msg:',msg)
+#    else:
 #
 # set the canread value in the object and send it on knx bus
 #
-       wpflist[hex(sender)].setval(bval)
+    wpflist[hex(sender)].setval(bval)
 
 
 ### print can message
