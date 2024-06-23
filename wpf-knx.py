@@ -38,7 +38,7 @@ def can_parser(msg):
   else:
     bsend = msg.data[1:3]
     sender = int.from_bytes(bsend,'big')
-    bval = int.from_bytes(msg.data[3:5],'big')/10
+    bval = int.from_bytes(msg.data[3:5],'big',signed=True)/10
 #  print(msg.data,'\t',hex(sender))
 ### if the code is monitored, ie. is in the dict keys
 ###
