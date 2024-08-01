@@ -134,7 +134,7 @@ async def main()-> None:
   for key in data:
     x = data[key]
     if debug: print(x)
-    wpflist[key]=wpf(xknx,x['nom'],x['grpaddr'],x['dpt'],x['candest'],x['unit'],can0)
+    wpflist[key]=wpf(xknx,x['nom'],x['grpaddr'],x['dpt'],x['candest'],x['unit'],can0,knxgtw)
 
 
   fjson.close()
