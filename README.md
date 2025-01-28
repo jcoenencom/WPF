@@ -4,7 +4,7 @@ Connection of a Stiebel Eltron heat pump (WPF16) onto a knx Bus.
 
 This project uses a raspberry pi CAN bus interface (MCP2515 Can controller + MCP2551 Transceiver on the RPi's SPI interface) on the CAn' side and connects to the KNX bus via ethernet (either to a KNX/IP router or an instance of knxd).
 
-Several CAN bus interfaces have been successfully tested, the skpang.co.uk PICAN rev B (replaced by eht PICAN 2), coming from from an older version of the project installed on a raspberry pi model B; the sensing of the WPF was done by a stiebel modem with software from stiebel running on a windows XP virtual machine, the raspberry was monitoring the responses from the WPF controller. A cumbersome configuration.
+Several CAN bus interfaces have been successfully tested, the skpang.co.uk PICAN rev B (replaced by the PICAN 2), coming from from an older version of the project installed on a raspberry pi model B; the sensing of the WPF was done by a stiebel modem with software from stiebel running on a windows XP virtual machine, the raspberry was monitoring the responses from the WPF controller. A cumbersome configuration.
 Other CAN bus interfaces tested: Waveshare RS485-CAN HAT and USB2CAN converter.
 
 After many years the SD card of the rasspberry failed, as I lost the original code, I decided to rewrite it.
@@ -32,7 +32,7 @@ after that the interface can be brought up at 20 KHz (WPF bus speed):
 
 sudo /sbin/ip link set can0 up type can bitrate 20000
 
-Dogin an ifconfig should indicate the interface
+Doing an ifconfig should indicate the interface
 
 
 $ ifconfig can0
